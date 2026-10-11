@@ -5,14 +5,17 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5;
+  color: #1f2937;
 }
 
-.container {
+/* Bài 1: Căn giữa phần tử bằng Flexbox */
+.center-demo {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f2f5;
+  padding: 20px;
 }
 
 .center-card {
@@ -29,4 +32,51 @@ body {
 
 .center-card p {
   margin-bottom: 0;
+}
+
+/* Bài 2: Danh sách thẻ sản phẩm co giãn linh hoạt */
+.products-section {
+  padding: 40px 20px 60px;
+  background-color: #f8fafc;
+}
+
+.products-section h1 {
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  flex: 1 1 calc(25% - 20px);
+  min-width: 220px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.price {
+  margin: 0;
+  color: #dc2626;
+  font-weight: bold;
 }
