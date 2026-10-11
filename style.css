@@ -80,3 +80,51 @@ body {
   color: #dc2626;
   font-weight: bold;
 }
+
+/* Bài 3: Thư viện ảnh đáp ứng bằng Flexbox */
+.gallery-page {
+  min-height: 100vh;
+  padding: 40px 20px 60px;
+  background-color: #eef2f7;
+}
+
+.gallery-page h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.gallery-intro {
+  text-align: center;
+  margin: 10px 0 28px;
+  color: #64748b;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  flex: 1 1 300px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
