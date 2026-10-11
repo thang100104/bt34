@@ -1,10 +1,10 @@
 # BT34 - Flexbox
 
-Repo gồm 2 bài thực hành Flexbox:
+Repo gồm 3 bài thực hành Flexbox:
 
 ## 1. Căn giữa phần tử hoàn hảo
 
-Sử dụng 3 thuộc tính chính:
+Sử dụng:
 
 ```css
 display: flex;
@@ -22,8 +22,32 @@ flex-wrap: wrap;
 gap: 20px;
 ```
 
-Mỗi thẻ dùng `flex: 1 1 calc(25% - 20px)` và `min-width: 220px` để tự động co giãn và xuống dòng khi màn hình nhỏ hơn.
+Mỗi thẻ sử dụng `flex` và `min-width` để tự động co giãn và xuống dòng.
+
+## 3. Mini project: Thư viện ảnh đáp ứng bằng Flexbox
+
+File: `gallery.html`
+
+Thư viện gồm 10 ảnh và sử dụng:
+
+```css
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 16px;
+```
+
+Mỗi ảnh dùng:
+
+```css
+flex: 1 1 300px;
+```
+
+Ảnh được đặt `width: 100%`, `height: 100%` và `object-fit: cover` để luôn vừa khung mà không bị méo.
+
+Có thêm hiệu ứng hover với `transform: scale(1.03)`.
 
 ## Cách chạy
 
-Mở file `index.html` bằng trình duyệt hoặc Live Server trong VS Code.
+- Mở `index.html` để xem các bài Flexbox trước.
+- Mở `gallery.html` để xem bài thư viện ảnh.
